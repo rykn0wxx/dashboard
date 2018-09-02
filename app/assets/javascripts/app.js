@@ -53,10 +53,25 @@
 		}
 	};
 
+	Mudhead.flash = {
+		selector: 'body .flash-wrapper',
+		delay: 3000,
+		activate: function () {
+			var o = this;
+			setTimeout(function () {
+				$(o.selector).fadeOut('slow', function () {
+					$(this).remove();
+				});
+			}, o.delay);
+		}
+	}
+
 	Mudhead.init = function () {
 		var o = this;
 		o.sidebar.activate();
+		o.flash.activate();
 		M.updateTextFields();
+		$('.dropdown-trigger').dropdown();
 		console.log('run');
 	};
 

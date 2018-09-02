@@ -77,7 +77,14 @@
 			}
 		}
 	}
-
+	.external-actions {
+		a {
+			color: #FFAE87;
+			&:hover, &:focus, &:active {
+				color: #DB4700;
+			}
+		}
+	}
 	@media #{$medium-and-down} {
 		.auth-wrapper {
 			padding: 10% 0;

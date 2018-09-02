@@ -86,7 +86,10 @@ select, button, textarea, input {
 a {
 	outline: none;
 	text-decoration: none;
+	color: $link-color;
+	transition: color 0.2s ease;
 	&:hover, &:active, &:focus {
+		color: mix(#ffffff, $link-color, 30%);
 		outline: none;
 		text-decoration: none;
 	}
@@ -103,5 +106,25 @@ nav {
 		a {
 			font-size: 1.6rem;
 		}
+	}
+}
+
+.flash-wrapper {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	.flash {
+		height: 64px;
+		text-align: center;
+		line-height: 64px;
+		letter-spacing: .005em;
+		font-weight: 500;
+	}
+	.flash-notice {
+		background-color: rgba($success-color, 0.85);
+	}
+	.flash-alert {
+		background-color: rgba($error-color, 0.85);
 	}
 }

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
 	get 'index' => 'page#index', :as => 'index'
 	get 'theme' => 'page#theme', :as => 'theme'
 	get 'login' => 'page#login', :as => 'login'

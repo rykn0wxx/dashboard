@@ -1,5 +1,16 @@
 <header class="main-header">
 	<div class="navbar-fixed">
+		<ul id="user-options" class="dropdown-content">
+			<% if user_signed_in? %>
+			  <li>
+			  	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+			  </li>
+			<% else %>
+			  <li>
+			  	<%= link_to('Login', new_user_session_path)  %>
+			  </li>
+			<% end %>
+		</ul>
 		<nav>
 	    <div class="nav-wrapper">
 				<%= link_to "#", :class => "sidenav-trigger show-on-large", :data => { :target => "main-sidebar", :turbolinks => false } do %>
@@ -11,11 +22,8 @@
 						<b>admin</b>istrate
 					</span>
 				<% end %>
-				<span class="flex"></span>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href="#">Sass</a></li>
-	        <li><a href="#">Components</a></li>
-	        <li><a href="#">JavaScript</a></li>
+	      <ul class="right hide-on-med-and-down" style="margin-right: 18px;">
+	        <li><a href="#!" class="dropdown-trigger" data-target="user-options"><%= mi.settings %></a></li>
 	      </ul>
 	    </div>
 	  </nav>

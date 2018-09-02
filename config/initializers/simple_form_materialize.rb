@@ -2,7 +2,7 @@
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   config.error_notification_class = "alert alert-danger"
-  config.button_class = "btn waves-effect"
+  config.button_class = "waves-effect"
   config.boolean_label_class = nil
   config.boolean_style = :inline
 
@@ -19,8 +19,8 @@ SimpleForm.setup do |config|
     b.optional :icon
 
     # Form Components
-    b.use :input, class: "validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -37,8 +37,8 @@ SimpleForm.setup do |config|
     b.optional :icon
 
     # Form Components
-    b.use :input, class: "validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -55,8 +55,8 @@ SimpleForm.setup do |config|
     b.use :icon
 
     # Form Components
-    b.use :input, class: "validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -73,8 +73,8 @@ SimpleForm.setup do |config|
     b.use :icon
 
     # Form Components
-    b.use :input, class: "validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -91,8 +91,8 @@ SimpleForm.setup do |config|
     b.use :icon
 
     # Form Components
-    b.use :input, class: "validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -106,8 +106,8 @@ SimpleForm.setup do |config|
     b.use :icon
 
     # Form Components
-    b.use :input, class: "datepicker validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "datepicker validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -124,8 +124,8 @@ SimpleForm.setup do |config|
     b.optional :icon
 
     # Form Components
-    b.use :input, class: "materialize-textarea validate", error_class: "invalid"
-    b.use :label
+    b.use :input, class: "materialize-textarea validate md-input", error_class: "invalid"
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -137,7 +137,7 @@ SimpleForm.setup do |config|
 
     # Form Components
     b.use :input
-    b.use :label
+    b.use :label, class: "md-input-label"
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
 
@@ -149,7 +149,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
 
     # Form Components
-    b.use :label
+    b.use :label, class: "md-input-label"
     b.wrapper tag: "label" do |ba|
       ba.use :input
       ba.use :tag, tag: "span", class: "lever"
@@ -166,7 +166,7 @@ SimpleForm.setup do |config|
     b.optional :min_max
 
     # Form Components
-    b.use :label
+    b.use :label, class: "md-input-label"
     b.use :input
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
@@ -179,7 +179,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
 
     # Form Components
-    b.use :label
+    b.use :label, class: "md-input-label"
     b.use :input
     b.use :hint, wrap_with: { tag: "span", class: "help-text" }
   end
@@ -239,6 +239,7 @@ SimpleForm.setup do |config|
     range:         :materialize_range,
     date:          :materialize_date,
     check_boxes:   :materialize_radio_and_checkboxes,
-    radio_buttons: :materialize_radio_and_checkboxes
+    radio_buttons: :materialize_radio_and_checkboxes,
+		login: 	       :materialize_string
   }
 end
