@@ -172,3 +172,7 @@
 		clear: both;
 	}
 }
+
+@mixin border-radius($radius: 2px) {
+  border-radius: $radius;
+}
