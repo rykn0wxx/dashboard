@@ -31,3 +31,5 @@ gem 'materialize-sass', '~> 1.0.0.rc2'
 
 gem 'smarter_csv'
 gem 'parallel'
+
+gem 'simple_form', '~> 4.0', '>= 4.0.1'

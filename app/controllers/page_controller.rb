@@ -7,6 +7,7 @@ class PageController < ApplicationController
   end
 
   def register
+		render layout: 'authentication'
   end
 
   def theme

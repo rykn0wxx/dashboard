@@ -56,6 +56,8 @@
 	Mudhead.init = function () {
 		var o = this;
 		o.sidebar.activate();
+		M.updateTextFields();
+		console.log('run');
 	};
 
 
